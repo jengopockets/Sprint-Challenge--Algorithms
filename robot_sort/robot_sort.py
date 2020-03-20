@@ -116,7 +116,7 @@ class SortingRobot:
             while self.can_move_left() and self.compare_item() != None:
                 self.move_left()
             
-            
+            #Should drop item and have nothing
             self.swap_item()
             self.move_right()
             #If done turns light of if not done light stays on
