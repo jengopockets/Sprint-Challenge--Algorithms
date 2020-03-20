@@ -103,12 +103,12 @@ class SortingRobot:
         while self.light_is_on():
             #Grabs initial item
             self.swap_item()
-            #Loops as long as robot can move right
+            #Loops as long as robot can move right. Will move all the way down the list looking for the smallest item.
             while self.can_move_right():
                 #Moves Right
                 self.move_right()
 
-                #Compares And swaps item if held item is bigger
+                #Compares And swaps item if held item is bigger as it goes down the list
                 if self.compare_item() == 1:
                     self.swap_item()
                 
@@ -122,8 +122,6 @@ class SortingRobot:
             #If done turns light of if not done light stays on
             if not self.can_move_right():
                 self.set_light_off()
-            else:
-                self.set_light_on()
 
 
 
